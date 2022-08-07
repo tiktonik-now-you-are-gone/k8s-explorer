@@ -1,9 +1,10 @@
+using K8S.Crawler.Host.Actors.Core;
+using K8S.Crawler.Host.Actors.Deployments;
+using K8S.Crawler.Host.Domain;
+
 namespace K8S.Crawler.Host.Actors.Cluster;
 
-public class ExploreClusterResponse
+public class ExploreClusterResponse : MessageBase
 {
-    // todo: introduce base class
-    public string CorrelationId { get; set; }
-
-    public IList<string> Clusters { get; set; }
+    public K8SCluster Cluster { get; set; }
 }
